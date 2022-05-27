@@ -35,3 +35,11 @@ $ code --install-extention dbaeumer.vscode-eslint
 ```console
 $ yarn lint
 ```
+
+### Tags / Branches
+
+- `v*` タグ: 製品版
+- `main` ブランチ: Beta版
+- `develop` ブランチ: Alpha版
+- `feature/*` ブランチ: 機能追加
+- `hotfix/*` ブランチ: 機能修正
