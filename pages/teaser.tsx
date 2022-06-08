@@ -1,12 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Text } from '../components/Text'
 import styles from '../styles/Home.module.css'
+import { HamburgerMenu } from '../components/hamburger_menu'
 
 const Home: NextPage = () => {
   return (
     <div className="bg-noble-white">
+      <HamburgerMenu></HamburgerMenu>
       <div className="relative">
         <div className="flex absolute justify-start items-end w-screen h-screen">
           <Image
@@ -56,12 +57,9 @@ const Home: NextPage = () => {
             height={642.2}
             alt="bg_main"
           ></Image>
-          <div>
-            <div className="absolute top-1/2 left-1/2 w-0 h-14 bg-black -translate-x-1/2 -translate-y-1/2 an1-fadeup"></div>
-            <div>
-              <p className="absolute top-1/2 left-1/2 font-serif text-4xl font-black text-white whitespace-nowrap -translate-x-1/2 -translate-y-1/2 typing">
-                プログラム研究部
-              </p>
+          <div className="flex absolute top-1/2 left-1/2 z-10 justify-center items-center w-full h-14 -translate-x-1/2 -translate-y-1/2 ">
+            <div className="flex relative justify-center items-center h-full font-serif text-4xl font-black text-white whitespace-nowrap bg-black an1-fadeup typing">
+              {/* タイトルの黒枠 */}
             </div>
           </div>
         </div>
