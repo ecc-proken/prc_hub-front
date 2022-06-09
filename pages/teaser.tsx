@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             width={327}
             height={381}
             alt="bg_main"
-          ></Image>
+          />
         </div>
       </div>
       <div className="flex justify-center items-center w-screen h-screen">
