@@ -5,7 +5,7 @@ import { HamburgerMenu } from '../components/hamburger_menu'
 const Home: NextPage = () => {
   return (
     <div className="bg-noble-white">
-      <HamburgerMenu></HamburgerMenu>
+      <HamburgerMenu />
       <div className="relative">
         <div className="flex absolute justify-start items-end w-screen h-screen">
           <Image
