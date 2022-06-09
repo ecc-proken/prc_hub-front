@@ -54,7 +54,7 @@ const Home: NextPage = () => {
             width={640}
             height={642.2}
             alt="bg_main"
-          ></Image>
+          />
           <div className="flex absolute top-1/2 left-1/2 z-10 justify-center items-center w-full h-14 -translate-x-1/2 -translate-y-1/2 ">
             <div className="flex relative justify-center items-center h-full font-serif text-4xl font-black text-white whitespace-nowrap bg-black an1-fadeup typing">
               {/* タイトルの黒枠 */}
