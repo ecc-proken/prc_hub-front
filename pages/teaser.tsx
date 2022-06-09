@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             width={407}
             height={414}
             alt="bg_main"
-          ></Image>
+          />
         </div>
         <div className="flex absolute justify-end items-start w-screen h-screen">
           <Image
