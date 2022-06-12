@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const HamburgerMenu = () => {
   return (
     <div className="bg-black">
@@ -8,24 +10,24 @@ export const HamburgerMenu = () => {
       <div className="menu-content">
         <ul>
           <li>
-            <a href="#" className="menu-item">
-              ホーム
-            </a>
+            <Link href="#">
+              <a className="menu-item">ホーム</a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="menu-item">
-              イベント情報
-            </a>
+            <Link href="/events">
+              <a className="menu-item">イベント情報</a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="menu-item">
-              先輩の作品
-            </a>
+            <Link href="/events">
+              <a className="menu-item">先輩の作品</a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="menu-item">
-              プロ研について
-            </a>
+            <Link href="#">
+              <a className="menu-item">プロ研について</a>
+            </Link>
           </li>
         </ul>
       </div>
