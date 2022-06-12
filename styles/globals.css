@@ -161,6 +161,85 @@ a {
 
 }
 
+.typing-study-group::before,
+.typing-study-group::after {
+  content: "";
+  border-right: 3px solid;
+  opacity: 0;
+  white-space: nowrap;
+  width: fit-content;
+
+}
+
+.typing-study-group::before {
+  animation: typing-study-group-left 1.0s forwards, blink .5s step-end infinite alternate;
+  animation-delay: 2s;
+}
+
+.typing-study-group::after {
+  animation: typing-study-group-right 1.0s forwards, blink .5s step-end infinite alternate;
+  animation-delay: 3.0s;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes typing-study-group-left {
+  0% {
+    content: "b";
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  10% {
+    content: "べ";
+  }
+
+  20% {
+    content: "べn";
+  }
+
+  30% {
+    content: "べんk";
+  }
+
+  40% {
+    content: "べんky";
+  }
+
+  50% {
+    content: "べんきょ";
+  }
+
+  60% {
+    content: "べんきょう";
+  }
+
+  70% {
+    content: "べんきょうk";
+  }
+
+  80% {
+    content: "べんきょうか";
+  }
+
+  90% {
+    content: "べんきょうかい";
+    border-right: 3px solid;
+    text-decoration: underline;
+  }
+
+  100% {
+    content: "勉強会";
+    opacity: 1;
+    /* border-right: none; */
+    text-decoration: none;
+  }
+}
+
 .an1-fadein {
   opacity: 0;
   font-weight: bold;
