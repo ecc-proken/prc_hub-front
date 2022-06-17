@@ -31,9 +31,8 @@ const EventList: NextPage = () => {
                 alt="bg_main"
               />
               <div className="flex absolute top-1/2 left-1/2 z-10 justify-center items-center w-2/6 h-14 -translate-x-1/2 -translate-y-1/2 ">
-                <div className="flex relative justify-center items-center h-full font-serif text-4xl font-black text-white whitespace-nowrap bg-black an1-fadeup typing-study-group">
-                  {/* タイトルの黒枠 */}
-                </div>
+                {/* タイトルの黒枠 */}
+                <div className="flex relative justify-center items-center h-full font-serif text-4xl font-black text-white whitespace-nowrap bg-black an1-fadeup typing-study-group" />
               </div>
             </div>
             <div className="w-screen h-max">
