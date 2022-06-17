@@ -42,16 +42,14 @@ const EventList: NextPage = () => {
                 </div>
               </div>
               <div className="divide-y">
-                <div>
+                <div className="flex flex-col justify-center">
                   {/* .mapで配列内の要素を全て回している。 */}
                   {events.map((event) => {
                     return (
                       <div key={`event-${event.id}`}>
-                        <div className="flex justify-center items-center">
-                          <div className="m-7 w-1/2 h-0.5 bg-black opacity-20"></div>
-                        </div>
-                        <div className="flex justify-center">
-                          <div className="w-1/4">
+                        <div className="my-7 mx-auto w-full max-w-[800px] h-0.5 bg-black opacity-20"></div>
+                        <div className="flex justify-center mx-auto max-w-[800px]">
+                          <div className="w-1/4 min-w-[200px] max-w-[540px]">
                             <Image
                               src="/svg/human_sample1.png"
                               width={538}
@@ -59,7 +57,7 @@ const EventList: NextPage = () => {
                               alt="bg_main"
                             />
                           </div>
-                          <div className="pl-5 w-1/4">
+                          <div className="pl-5 w-full">
                             <div>
                               <div className="inset-x-0 top-0 text-3xl font-bold">
                                 {event.title}
@@ -67,15 +65,19 @@ const EventList: NextPage = () => {
                               <div className="mt-1 text-lg">藤島 拓人</div>
                               {/* mapで回す */}
                               <div className="flex mt-1">
-                                <div className="py-0.5 px-3 mr-2 w-max text-sm text-white bg-primary-blue">
-                                  5月16日
-                                </div>
-                                <div className="py-0.5 px-3 mr-2 w-max text-sm text-white bg-primary-blue">
-                                  5月17日
-                                </div>
-                                <div className="py-0.5 px-3 mr-2 w-max text-sm text-white bg-primary-blue">
-                                  5月20日
-                                </div>
+                                {event.datetimes?.map((datetime) => {
+                                  const date = new Date(datetime.start)
+                                  return (
+                                    <div
+                                      key={`dt-${datetime.id}`}
+                                      className="py-0.5 px-3 mr-2 w-max text-sm text-white whitespace-nowrap bg-primary-blue"
+                                    >
+                                      {`${
+                                        date.getMonth() + 1
+                                      }月${date.getDate()}日`}
+                                    </div>
+                                  )
+                                })}
                               </div>
                               <div className="mt-3 text-sm">
                                 &nbsp;{event.description}
@@ -83,7 +85,7 @@ const EventList: NextPage = () => {
                             </div>
                             <div className="flex mt-2">
                               <div className="flex py-1 px-5 border-2 border-primary-blue">
-                                <div className=" text-base font-bold text-primary-blue">
+                                <div className=" text-base font-bold text-primary-blue whitespace-nowrap">
                                   参加する
                                 </div>
                                 <div className="content-end">
@@ -97,7 +99,7 @@ const EventList: NextPage = () => {
                               </div>
                               <div className="mx-3"></div>
                               <div className="flex py-1 px-5 border-2 border-primary-blue">
-                                <div className="text-base font-bold text-primary-blue">
+                                <div className="text-base font-bold text-primary-blue whitespace-nowrap">
                                   詳細を見る
                                 </div>
                                 <div className="content-end">
