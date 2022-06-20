@@ -52,8 +52,9 @@ const EventList: NextPage = () => {
                           <div className="w-1/4 min-w-[200px] max-w-[540px]">
                             <Image
                               src="/svg/human_sample1.png"
-                              width={538}
-                              height={380}
+                              width={540}
+                              height={405}
+                              objectFit="contain"
                               alt="bg_main"
                             />
                           </div>
