@@ -16,6 +16,9 @@ module.exports = {
       backgroundImage: {
         'bg-text': "url('/front/public/svg/bg_text.png')",
       },
+      borderWidth: {
+        3: '3px',
+      },
     },
   },
   plugins: [],
