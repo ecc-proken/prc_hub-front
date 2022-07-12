@@ -235,7 +235,6 @@ a {
   100% {
     content: "勉強会";
     opacity: 1;
-    /* border-right: none; */
     text-decoration: none;
   }
 }
@@ -269,15 +268,11 @@ a {
 }
 
 .an1-fadeup {
-  /* background-color: #ff7f50; */
-  /* font-size: 30px; */
   font-weight: bold;
   animation-name: fadeup;
   animation-duration: 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
-
-  /* animation-iteration-count: infinite; */
 }
 
 @keyframes fadeup {
@@ -288,19 +283,6 @@ a {
   to {
     width: 70%;
   }
-}
-
-.menu-btn {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  z-index: 90;
-  background-color: #24AEDC;
 }
 
 .menu-btn span,
@@ -348,52 +330,16 @@ a {
   display: none;
 }
 
-
-
-
 .menu-content {
-  overflow: hidden;
-  position: fixed;
-  bottom: 50px;
-  right: 110px;
-  /* right: -40%; */
-  /*leftの値を変更してメニューを画面外へ*/
-  z-index: 80;
   transition: all 0.5s;
-  /*アニメーション設定*/
 }
 
 .menu-content ul {
   transform: translateX(100%);
-  /* opacity: 0; */
   transition: 0.3s;
 }
 
-.menu-content ul li {
-  border-bottom: solid 3px #24AEDC;
-  list-style: none;
-  float: left;
-}
-
-.menu-content ul li a {
-  display: block;
-  /* width: 100%; */
-  font-size: 18px;
-  box-sizing: border-box;
-  color: #000000;
-  text-decoration: none;
-  padding: 9px 15px 10px 0;
-  position: relative;
-
-}
-
-.menu-item:hover {
-  color: #24AEDC;
-}
-
 #menu-btn-check:checked~.menu-content>ul {
-  /* right: 4.8%; */
   /*メニューを画面内へ*/
   transform: translateX(0);
-  /* opacity: 1; */
 }
